@@ -1,6 +1,6 @@
 {
 	"name": "figma-overlay",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"private": false,
 	"license": "MIT",
 	"description": "Your best friend when working with Figma designs",
@@ -8,6 +8,10 @@
 		"name": "Pitu",
 		"email": "heyitspitu@gmail.com",
 		"url": "https://github.com/Pitu"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Pitu/figma-overlay.git"
 	},
 	"main": "dist/figma-overlay.umd.js",
 	"types": "./types/main.d.ts",
