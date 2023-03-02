@@ -1,6 +1,6 @@
 # Figma overlay
 
-In an effort to make components as close as possible as the provided design I built this small utility that let's you copy a Figma component and paste it on the page to drag it around to compare the design to the implementation.
+In an effort to make components as close as possible as the provided design I built this small utility that lets you copy a Figma component and paste it on the page to drag it around to compare the design to the implementation.
 
 The way it works is it grabs the SVG component from the clipboard and creates an object that you can drag around and use the arrow keys to move with pixel accuracy to place the overlay on top of the component you want to compare it to.
 
@@ -25,13 +25,13 @@ And make sure to add `figma-overlay` as a Custom Element in `vite.config.ts`
 ```ts
 ...
 plugins: [
-	vue({
-		template: {
-			compilerOptions: {
-				isCustomElement: tag => tag.includes('figma-overlay')
-			}
-		}
-	})
+  vue({
+    template: {
+	  compilerOptions: {
+	    isCustomElement: tag => tag.includes('figma-overlay')
+      }
+    }
+  })
 ],
 ```
 
