@@ -5,7 +5,10 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+	"declaration": true,
+	"sourceMap": true,
+	"outDir": "types"
   },
 
   "references": [

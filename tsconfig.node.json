@@ -3,6 +3,9 @@
   "include": ["vite.config.*"],
   "compilerOptions": {
     "composite": true,
-    "types": ["node"]
+    "types": ["node"],
+	"declaration": true,
+	"sourceMap": true,
+	"outDir": "types"
   }
 }

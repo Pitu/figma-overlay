@@ -12,10 +12,11 @@
 	"main": "dist/figma-overlay.umd.js",
 	"scripts": {
 		"dev": "vite",
-		"build": "run-p type-check build-only",
+		"build": "run-p type-check emit-types build-only",
 		"preview": "vite preview",
 		"build-only": "vite build",
 		"type-check": "vue-tsc --noEmit",
+		"emit-types": "vue-tsc --emitDeclarationOnly",
 		"lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
 		"format": "prettier --write src/"
 	},
@@ -43,5 +44,11 @@
 	"volta": {
 		"node": "18.9.0"
 	},
-	"keywords": ["figma", "overlay", "figma-overlay", "design", "pitu"]
+	"keywords": [
+		"figma",
+		"overlay",
+		"figma-overlay",
+		"design",
+		"pitu"
+	]
 }
