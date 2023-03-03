@@ -14,7 +14,7 @@
 
 [![NPM version](https://img.shields.io/npm/v/figma-overlay.svg?style=flat-square)](https://npmjs.com/package/figma-overlay)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/kanadeko/Kuro/master/LICENSE)
-[![Support](https://img.shields.io/badge/Chat%20%2F%20Support-discord-7289DA.svg?style=flat-square)](https://discord.gg/5g6vgwn)
+[![Support](https://img.shields.io/badge/Support-discord-7289DA.svg?style=flat-square)](https://discord.gg/5g6vgwn)
 [![Support me](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dpitu%26type%3Dpledges&style=flat-square)](https://www.patreon.com/pitu)
 
 Figma overlay is a drop-in component to create an overlay over your website to compare it to it's figma counterpart
@@ -23,8 +23,7 @@ It works by grabbing the page/component svg from your clipboard and creating a f
 Figma overlay is a Web Component so it works with any framework
 
 [Introduction](#introduction) •
-[Installation](#installation) •
-[Configuration](#configuration)
+[Installation](#installation)
 
 </div>
 
