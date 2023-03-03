@@ -1,6 +1,9 @@
-import { defineCustomElement } from 'vue';
-import FigmaOverlayComponent from './components/FigmaOverlay.ce.vue';
+import type { App } from 'vue';
 
-const FigmaOverlay = defineCustomElement(FigmaOverlayComponent);
+import FigmaOverlay from './components/FigmaOverlay.ce.vue';
 
-customElements.define('figma-overlay', FigmaOverlay);
+export default {
+	install(Vue: App) {
+		Vue.component('FigmaOverlay', FigmaOverlay);
+	}
+};

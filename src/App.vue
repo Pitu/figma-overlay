@@ -1,4 +1,4 @@
 <template>
 	<div>asdasdasdasd</div>
-	<figma-overlay />
+	<FigmaOverlay />
 </template>
