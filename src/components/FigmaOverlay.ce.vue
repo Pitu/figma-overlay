@@ -136,7 +136,6 @@ p {
 }
 
 #container {
-	border: 1px solid red;
 	position: absolute;
 	bottom: 1rem;
 	left: 1rem;
