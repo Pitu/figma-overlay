@@ -4,9 +4,7 @@
 			{{ buttonText }}
 		</button>
 		<div v-else>
-			<button type="button" @click="removeSvgComponent">Remove overlay</button>
-
-			<div id="info">
+			<div id="controls">
 				<input v-model="overlayOpacity" type="range" list="tickmarks" min="0" max="100" step="10" />
 				<datalist id="tickmarks">
 					<option value="0"></option>
@@ -21,6 +19,11 @@
 					<option value="90"></option>
 					<option value="100"></option>
 				</datalist>
+
+				<label>
+					<input v-model="ignoreClicks" type="checkbox" name="ignoreclicks" checked />
+					Ignore clicks
+				</label>
 			</div>
 
 			<p>
@@ -28,11 +31,14 @@
 				<br />
 				escape to remove the overlay
 			</p>
+
+			<button class="mt-2" type="button" @click="removeSvgComponent">Remove overlay</button>
 		</div>
 	</div>
 	<div
 		id="figmaOverlay"
 		ref="figmaOverlay"
+		:class="[ignoreClicks ? 'pointer-events-none' : 'pointer-events-auto']"
 		:style="{
 			opacity: overlayOpacity / 100
 		}"
@@ -46,6 +52,7 @@ const buttonText = ref('Load figma component from clipboard');
 const figmaOverlay = ref<HTMLImageElement | null>(null);
 const isShowingOverlay = ref(false);
 const overlayOpacity = ref(50);
+const ignoreClicks = ref(false);
 
 const createSvgComponent = (svg: string) => {
 	if (!figmaOverlay.value) return;
@@ -151,9 +158,9 @@ button {
 	height: 28px;
 }
 
-#info {
+#controls {
 	width: 100%;
-	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
 }
 
 input[type='range'] {
@@ -165,8 +172,14 @@ p {
 	line-height: 1rem;
 }
 
+label {
+	padding-left: 4px;
+}
+
 button,
-p {
+p,
+input,
+label {
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -175,5 +188,16 @@ p {
 	z-index: 9999;
 	top: 0px;
 	left: 0px;
+}
+
+.mt-2 {
+	margin-top: 0.5rem;
+}
+
+.pointer-events-none {
+	pointer-events: none;
+}
+.pointer-events-auto {
+	pointer-events: auto;
 }
 </style>
