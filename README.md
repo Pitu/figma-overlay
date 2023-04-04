@@ -83,6 +83,10 @@ plugins: [
 Add the script at the end of your `body` tag
 ```html
 <script src="https://unpkg.com/figma-overlay@latest"></script>
+
+or
+
+<script src="https://cdn.jsdelivr.net/npm/figma-overlay@1.0.7/dist/figma-overlay.umd.min.js"></script>
 ```
 And then ideally place the component right after the body
 ```html
