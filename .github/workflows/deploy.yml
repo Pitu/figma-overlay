@@ -1,5 +1,4 @@
 name: Release
-
 on:
     push:
         branches: [main]
@@ -27,6 +26,5 @@ jobs:
 
             - uses: EndBug/add-and-commit@v9
               with:
-                  add: '.dist/ --force'
-                  branch: main
+                  add: 'dist/ --force'
                   message: 'dist: deploy new dist file'
