@@ -14,7 +14,7 @@
 		"url": "git+https://github.com/Pitu/figma-overlay.git"
 	},
 	"main": "dist/figma-overlay.umd.js",
-	"types": "./types/main.d.ts",
+	"types": "./dist/src/components/FigmaOverlay.ce.vue.d.ts",
 	"scripts": {
 		"dev": "vite",
 		"build": "run-p type-check emit-types build-only",
@@ -25,6 +25,7 @@
 		"lint": "prettier --check . && cross-env TIMING=1 eslint src --ext .ts,.vue",
 		"format": "prettier --write . && cross-env TIMING=1 eslint src --ext .ts,.vue --fix"
 	},
+	"files": ["dist/**/*"],
 	"dependencies": {
 		"vue": "^3.2.47"
 	},
