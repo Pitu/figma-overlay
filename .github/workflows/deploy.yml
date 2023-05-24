@@ -14,6 +14,8 @@ jobs:
         steps:
             - name: Checkout repo
               uses: actions/checkout@v3
+              with:
+                  token: '${{ secrets.GITHUB_TOKEN }}'
 
             - name: Install Node v16
               uses: actions/setup-node@v3
@@ -23,7 +25,8 @@ jobs:
             - run: npm i
             - run: npm run build
 
-            - uses: EndBug/add-and-commit@v6
+            - uses: EndBug/add-and-commit@v9
               with:
+                  add: '.dist/ --force'
                   branch: main
                   message: 'dist: deploy new dist file'
