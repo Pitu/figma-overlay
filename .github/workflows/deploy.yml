@@ -1,29 +1,29 @@
 name: Release
 
 on:
-  push:
-    branches: [ main ]
-  workflow_dispatch:
+    push:
+        branches: [main]
+    workflow_dispatch:
 
 env:
-  NODE_VERSION: 18
+    NODE_VERSION: 18
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repo
+              uses: actions/checkout@v3
 
-      - name: Install Node v16
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18.x'
+            - name: Install Node v16
+              uses: actions/setup-node@v3
+              with:
+                  node-version: '18.x'
 
-      - run: npm i
-      - run: npm run build
+            - run: npm i
+            - run: npm run build
 
-      - uses: EndBug/add-and-commit@v6
-        with:
-          branch: main
-          message: 'dist: deploy new dist file'
+            - uses: EndBug/add-and-commit@v6
+              with:
+                  branch: main
+                  message: 'dist: deploy new dist file'
