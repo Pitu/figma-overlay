@@ -1,11 +1,11 @@
 {
-  "extends": "@vue/tsconfig/tsconfig.node.json",
-  "include": ["vite.config.*"],
-  "compilerOptions": {
-    "composite": true,
-    "types": ["node"],
-	"declaration": true,
-	"sourceMap": true,
-	"outDir": "types"
-  }
+	"extends": "@vue/tsconfig/tsconfig.node.json",
+	"include": ["vite.config.*"],
+	"compilerOptions": {
+		"composite": true,
+		"types": ["node"],
+		"declaration": true,
+		"sourceMap": true,
+		"outDir": "dist"
+	}
 }
