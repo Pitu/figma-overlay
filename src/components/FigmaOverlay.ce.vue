@@ -210,7 +210,6 @@ label {
 	z-index: 9999;
 	top: 0px;
 	left: 0px;
-	border: 1px dashed #115cac;
 	border-radius: 8px;
 	cursor: move;
 }
