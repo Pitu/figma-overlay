@@ -1,5 +1,5 @@
 <template>
-	<div id="container" :class="{ alwaysOnTop, isShowingOverlay }">
+	<div id="container">
 		<button v-if="!isShowingOverlay" type="button" @click="loadSvgComponent">
 			{{ buttonText }}
 		</button>
@@ -19,11 +19,6 @@
 					<option value="90"></option>
 					<option value="100"></option>
 				</datalist>
-
-				<label>
-					<input v-model="alwaysOnTop" type="checkbox" name="alwaysontop" checked />
-					Always on top
-				</label>
 
 				<label>
 					<input v-model="ignoreClicks" type="checkbox" name="ignoreclicks" checked />
@@ -58,7 +53,6 @@ const figmaOverlay = ref<HTMLImageElement | null>(null);
 const isShowingOverlay = ref(false);
 const overlayOpacity = ref(50);
 const ignoreClicks = ref(false);
-const alwaysOnTop = ref(true);
 
 const createSvgComponent = (svg: string) => {
 	if (!figmaOverlay.value) return;
@@ -117,10 +111,6 @@ const setUpDiv = () => {
 
 const onKeyDown = (e: KeyboardEvent) => {
 	if (!figmaOverlay.value) return;
-
-	e.preventDefault();
-	e.stopPropagation();
-
 	switch (e.key) {
 		case 'ArrowUp':
 			figmaOverlay.value.style.top = `${figmaOverlay.value.offsetTop - 1}px`;
@@ -156,18 +146,6 @@ p {
 	position: absolute;
 	bottom: 1rem;
 	left: 1rem;
-	padding: 16px;
-}
-
-#container.isShowingOverlay {
-	border: 1px solid #e5e5e5;
-	border-radius: 8px;
-	background-color: white;
-	box-shadow: rgba(0, 0, 0, 0.15) 0 0 6px;
-}
-
-#container.alwaysOnTop {
-	z-index: 10000;
 }
 
 button {
@@ -210,9 +188,6 @@ label {
 	z-index: 9999;
 	top: 0px;
 	left: 0px;
-	border: 1px dashed #115cac;
-	border-radius: 8px;
-	cursor: move;
 }
 
 .mt-2 {

@@ -1,19 +1,20 @@
 {
-  "extends": "@vue/tsconfig/tsconfig.web.json",
-  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    },
-	"declaration": true,
-	"sourceMap": true,
-	"outDir": "types"
-  },
+	"extends": "@vue/tsconfig/tsconfig.web.json",
+	"include": ["env.d.ts", "src/**/*", "src/**/*.vue", "vite.config.ts"],
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["./src/*"]
+		},
+		"declaration": true,
+		"sourceMap": true,
+		"outDir": "dist",
+		"skipLibCheck": true
+	},
 
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
-  ]
+	"references": [
+		{
+			"path": "./tsconfig.node.json"
+		}
+	]
 }

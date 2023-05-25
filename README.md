@@ -28,6 +28,7 @@ Figma overlay is a Web Component so it works with any framework
 </div>
 
 ## Introduction
+
 In an effort to aid the gap between a Figma design and the implementation counterpart this tool aims to make it easier for developers to achieve pixel-perfect implementation of designs. The workflow consists on opening a figma design, selecting a component, right clicking it and selecting copy and finally selecting `Copy as SVG`
 
 <div align="center">
@@ -46,7 +47,6 @@ And that's it! Now you can drag the overlay around, use the arrow keys to tune t
 <img width="800" src="https://user-images.githubusercontent.com/7425261/222626102-5e98ac67-ebe0-4a27-ad69-e76e9a32b2b0.gif">	
 </div>
 
-
 ## Installation
 
 Figma overlay is a Web Component which means you can use it with any framework you like by importing it properly. This small guide will only cover how to add it to the browser and to Vite based projects, specifically with Vue. If you get it up and running with other setup and want to contribute, please make a PR to ammend the instructions.
@@ -58,14 +58,19 @@ npm i figma-overlay
 ```
 
 Then import the component
+
 ```ts
 import FigmaOverlay from 'figma-overlay';
 ```
+
 Add it to your html as follows.
+
 ```html
 <figma-overlay></figma-overlay>
 ```
+
 And make sure to add `figma-overlay` as a Custom Element in `vite.config.ts`
+
 ```ts
 ...
 plugins: [
@@ -80,7 +85,9 @@ plugins: [
 ```
 
 ### In the browser
+
 Add the script at the end of your `body` tag
+
 ```html
 <script src="https://unpkg.com/figma-overlay@latest"></script>
 
@@ -88,12 +95,15 @@ or
 
 <script src="https://cdn.jsdelivr.net/npm/figma-overlay@1.0.7/dist/figma-overlay.umd.min.js"></script>
 ```
+
 And then ideally place the component right after the body
+
 ```html
 ...
 <body>
 	<figma-overlay></figma-overlay>
 	...
+</body>
 ```
 
 ## Author
