@@ -7,7 +7,7 @@
 	<figma-overlay />
 </template>
 
-<style>
+<style scoped>
 * {
 	padding: 0;
 	margin: 0;
@@ -15,6 +15,7 @@
 
 div {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
