@@ -153,7 +153,7 @@ p {
 }
 
 #container {
-	position: absolute;
+	position: fixed;
 	bottom: 1rem;
 	left: 1rem;
 	padding: 16px;
@@ -206,7 +206,7 @@ label {
 }
 
 #figmaOverlay {
-	position: absolute;
+	position: fixed;
 	z-index: 9999;
 	top: 0px;
 	left: 0px;
